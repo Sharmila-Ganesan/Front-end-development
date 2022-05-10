@@ -1,6 +1,5 @@
 
-## Milk Vendor - Sivalingam Milks
-
+## Milk Vendor 
 Online Milk delivery App that delivers milk to your doorstep.
 
 ## Available Scripts
