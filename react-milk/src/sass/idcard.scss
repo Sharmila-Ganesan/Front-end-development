@@ -1,0 +1,82 @@
+
+.print-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 680px;
+}
+
+.idcard{
+    height: 455px;
+    width: 285px;
+    margin: 10px;
+    border: 2px solid #00ff00;
+    border-radius: 20px;
+    background-color: #00ff00;
+    &-outer{
+        height: 475px;
+        width: 305px;
+        border: 1px solid;
+        margin: 10px;
+        border-radius: 20px;
+        background-color: white;
+    }
+    &-header{
+        height: 50px;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 285px;
+        width: 100%;
+        text-align: center;
+        color: black;
+        background-color: white;
+        border-radius: 40px;
+        font-size: 15px;
+        &-qr-img{
+            height: 180px;
+            width: 180px;
+        }
+        &-logo{
+            height: 250px;
+            width: 250px;
+        }
+    }
+    &-footer{
+        height: 120px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        padding: 10px;
+        font-weight: 600;
+    }
+}
+
+* {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+    color-adjust: exact !important;                 /*Firefox*/
+}
+
+@page {
+    margin: 20px 0px 0px 40px;
+}
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #print-area, #print-area * {
+      visibility: visible;
+    }
+    #print-area {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }

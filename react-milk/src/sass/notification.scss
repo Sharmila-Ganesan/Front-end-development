@@ -1,0 +1,20 @@
+
+
+.notification-item{
+    border-bottom: 1px solid #cccccc;
+}
+
+.notification-item:hover{
+    background-color:  #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+.notification-item:before{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color:#2cb5e8;
+    border-radius: 50%;
+    content: "";
+}
+

@@ -1,0 +1,42 @@
+$bg-img: url('../assets/img/login-bg.jpg');
+
+.login{
+    width: 100%;
+    height: calc(100vh - 56px);
+    margin: 0;
+    &-bg{
+        background-image: $bg-img;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &-banner{   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: calc(100%);
+        position: relative;
+        padding: 1rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+      
+    }
+    &-form{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: calc(100%);
+        position: relative;
+        border-radius: 1rem;
+        padding: 1rem;
+        
+        &-container{
+            width: 100%;
+            text-align: center;
+            transition: fade 2s linear;
+        }
+    }
+
+}

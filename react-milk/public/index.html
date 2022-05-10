@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="canonical" href="https://sivalingammilks.com/"/>
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Sivalingam Milks - online milk vendor, deliver milk at your doorsteps"
+    />
+    <link rel="apple-touch-icon"  href="./favicon.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>Sivalingam Milks</title>
+    <style>
+      .pageload{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2cb5e8;
+      }
+    </style>    
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="pageload" id="pageload">
+      <img src="./favicon.png" width="150px" height="150px"/>
+    </div>
+    <div id="root"></div>
+    <script>
+      if('serviceWorker' in navigator) {
+            window.addEventListener('load', async () => {
+                window.register = await navigator.serviceWorker.register('./serviceworker.js')
+            })
+        }
+    </script>
+    <script src="https://unpkg.com/delayed-scroll-restoration-polyfill@0.1.1/index.js" defer></script>
+  </body>
+</html>
