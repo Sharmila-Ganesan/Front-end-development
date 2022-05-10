@@ -1,0 +1,28 @@
+.container{
+    width: 250px;
+    height: 250px;
+}
+.example-button-container{
+    text-align: center;
+    color: #fff;
+    size: 100px;
+    padding-bottom: 30px;
+    
+}
+mat-icon{
+    font-size: 70px;
+    font-weight: bold;
+    padding: 20px 45px 0px 0;
+}
+.ok{
+    padding-left: 90px;
+    
+}
+.content{
+    padding-top: 20px;
+    text-align: center;
+}
+.top{
+    padding-top: 20px;
+    background-color: #0ABFD3;
+}

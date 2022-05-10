@@ -1,0 +1,13 @@
+table{
+    width: 100%;
+    border-spacing: 50px;
+    display: table-cell;
+    vertical-align: inherit;
+}
+td.mat-cell{
+    padding: 0 20px;
+    text-align: justify;
+}
+th.mat-header-cell{
+    padding: 0 20px;
+}

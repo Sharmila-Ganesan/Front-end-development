@@ -1,0 +1,7 @@
+---
+applications:
+- name: sharmilablob
+path: dist/garage-blog
+instances: 1
+buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+memory: 128M

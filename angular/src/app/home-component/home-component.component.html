@@ -1,0 +1,44 @@
+
+      <img class="homepageImage" src="assets/home.jpg" alt="">
+
+      <div class="container">
+      <mat-form-field class="full-width"  [formGroup]="myGroup" appearance="fill">
+        <mat-label>Filter:</mat-label>
+        <input [(ngModel)]='title' formControlName="filter" matInput  placeholder="Enter title">
+      </mat-form-field> 
+      </div>
+
+          <div  fxLayout="row wrap" fxLayoutGap="16px grid">
+          <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let card of data | filter:title: 'title'  ">
+          <mat-card class="example-card" [routerLink]="['contact']" >
+          <mat-card-header>
+            <mat-card-title>Title: {{card.title}}</mat-card-title>
+            </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <mat-card-subtitle>Author name: {{ card.authorName }}</mat-card-subtitle>
+            <mat-card-subtitle>Date: {{ card.date }} </mat-card-subtitle>
+            <p>
+              {{card.text}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions style="display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;">
+            
+            <div class="likeContainer">
+            
+            <button mat-button>{{numberOfLikes}}<mat-icon (click)="likeButtonClick()" aria-hidden="false" aria-label="Example home like">favorite</mat-icon>
+            </button></div>
+            <div class="commentContainer">
+            <button mat-button (click)="openDialog()"><mat-icon aria-hidden="false" aria-label="Example home icon">question_answer</mat-icon>
+            </button></div>
+            
+          </mat-card-actions>
+          <div *ngIf="animal">
+            Comment:<i>{{animal}}</i>
+          </div>
+        </mat-card>
+    </div>
+</div>

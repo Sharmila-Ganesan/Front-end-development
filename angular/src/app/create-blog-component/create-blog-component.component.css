@@ -1,0 +1,43 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+.container {
+  display: flex;
+  padding: 20px;
+}
+.leftSideContainer {
+  width: 60%;
+  margin: 10px;
+}
+.rightSideContainer {
+  width: 30%;
+  margin: 10px;
+}
+button {
+  margin-left: 2%;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightSideContainer {
+    width: 90%;
+    margin: 10px;
+  }
+  .leftSideContainer {
+    width: 90%;
+    margin: 10px;
+  }
+  button {
+    margin-left: 10%;
+    
+  }
+}
+.Swal-modal{
+  background-color: 3px solid red;
+}

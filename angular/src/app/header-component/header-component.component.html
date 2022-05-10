@@ -1,0 +1,24 @@
+
+    <mat-toolbar color="primary" class="top">
+      <div fxHide.gt-xs>
+        <button mat-icon-button (click)="ontoggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      
+      <a mat-button><img [routerLink]="['']" src="assets/ibm_logo.png">GarageForums</a>
+      
+      <div  fxHide.xs >
+        <button [routerLink]="['home']" class="but" mat-button >Home</button>
+        <button class="but" mat-button [matMenuTriggerFor]="menu">Blog</button>
+    
+        <mat-menu #menu="matMenu">
+          <button [routerLink]="['creatingBlog']" mat-menu-item>Create blog</button>
+          <button [routerLink]="['blogs']" mat-menu-item>Blogs</button>
+        </mat-menu>
+        
+        <button class="but" mat-button [routerLink]="['contact']">Contact </button>   
+        <button class="but" mat-button [routerLink]="['forums']">Forums</button>
+        
+      </div> 
+    </mat-toolbar>

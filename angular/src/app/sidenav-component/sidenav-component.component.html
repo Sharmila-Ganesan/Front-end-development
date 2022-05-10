@@ -1,0 +1,11 @@
+<mat-nav-list>
+    <button fxLayout="row" [routerLink]="['']" (click)=onsidenavclose() class="but" mat-button >Home</button>
+    <button fxLayout="row" class="but" mat-button [matMenuTriggerFor]="menu">Blog</button>
+    <mat-menu #menu="matMenu">
+      <button (click)=onsidenavclose() [routerLink]="['creatingBlog']" mat-menu-item>Create blog</button>
+      <button (click)=onsidenavclose() [routerLink]="['blogs']" mat-menu-item>Blogs</button>
+    </mat-menu>
+    
+    <button fxLayout="row" class="but" (click)=onsidenavclose() mat-button>Contact </button>   
+    <button fxLayout="row" class="but" (click)=onsidenavclose() mat-button>Forums</button>
+</mat-nav-list>
